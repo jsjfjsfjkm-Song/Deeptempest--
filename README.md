@@ -1,36 +1,36 @@
-# Deep-tempest:  Using Deep Learning to Eavesdrop on HDMI from its Unintended Electromagnetic Emanations
+# 深度风暴：利用深度学习窃听 HDMI 的意外电磁辐射
 
 <img src="deep-tempest.png"/>
 
-## Summary
+## 概括
 
-In this project we have extended the original [**gr-tempest**](https://github.com/git-artes/gr-tempest) (a.k.a. [Van Eck Phreaking](https://en.wikipedia.org/wiki/Van_Eck_phreaking) or simply TEMPEST; i.e. spying on a video display from its unintended electromagnetic emanations) by using deep learning to improve the quality of the spied images. See an illustrative diagram above. Some examples of the resulting inference of our system and the original unmodified version of gr-tempest below.
+在这个项目中，我们扩展了原始的gr-tempest（又名Van Eck Phreaking或简称为 TEMPEST；即通过无意的电磁辐射监视视频显示器），使用深度学习来提高监视图像的质量。请参见上面的说明图。下面是我们系统和原始未修改版本的 gr-tempest 得出的推断的一些示例。
 
 <img src="examples.png"/>
 
-The following external webpages provide a nice summary of the work:
-* NewScientist: [AI can reveal what’s on your screen via signals leaking from cables](https://www.newscientist.com/article/2439853-ai-can-reveal-whats-on-your-screen-via-signals-leaking-from-cables/)
-* RTL-SDR.com: [DEEP-TEMPEST: EAVESDROPPING ON HDMI VIA SDR AND DEEP LEARNING](https://www.rtl-sdr.com/deep-tempest-eavesdropping-on-hdmi-via-sdr-and-deep-learning/)
-* PC World: [Hackers can wirelessly watch your screen via HDMI radiation](https://www.pcworld.com/article/2413156/hackers-can-wirelessly-watch-your-screen-via-hdmi-radiation.html)
-* Techspot: [AI can see what's on your screen by reading HDMI electromagnetic radiation](https://www.techspot.com/news/104015-ai-can-see-what-screen-reading-hdmi-electromagnetic.html)
+以下外部网页对该工作提供了很好的总结：
+* 新科学家: [人工智能可以通过电缆泄漏的信号揭示屏幕上的内容](https://www.newscientist.com/article/2439853-ai-can-reveal-whats-on-your-screen-via-signals-leaking-from-cables/)
+* RTL-SDR.com: [DEEP-TEMPEST: 通过 SDR 和深度学习窃听 HDMI](https://www.rtl-sdr.com/deep-tempest-eavesdropping-on-hdmi-via-sdr-and-deep-learning/)
+* PC World: [黑客可以通过 HDMI 辐射无线监视你的屏幕](https://www.pcworld.com/article/2413156/hackers-can-wirelessly-watch-your-screen-via-hdmi-radiation.html)
+* Techspot: [AI 可以通过读取 HDMI 电磁辐射来查看屏幕上的内容](https://www.techspot.com/news/104015-ai-can-see-what-screen-reading-hdmi-electromagnetic.html)
 * Futura: [Hallucinant : ce système permet d’afficher et espionner ce qu’il y a sur l’écran d’un ordinateur déconnecté](https://www.futura-sciences.com/tech/actualites/technologie-hallucinant-ce-systeme-permet-afficher-espionner-ce-quil-y-ecran-ordinateur-deconnecte-114883/)
 * hackster.io: [Deep-TEMPEST Reveals All](https://www.hackster.io/news/deep-tempest-reveals-all-c8cb4f0ebd08)
-* Hacker News: [Deep-Tempest: Using Deep Learning to Eavesdrop on HDMI](https://news.ycombinator.com/item?id=41116682)
-* TechXplore: [Security researchers reveal it is possible to eavesdrop on HDMI cables to capture computer screen data](https://techxplore.com/news/2024-07-reveal-eavesdrop-hdmi-cables-capture.html)
-* Tom's Hardware: [AI can snoop on your computer screen using signals leaking from HDMI cables — researchers develop new AI model that enables using antennas for long-range attacks](https://www.tomshardware.com/tech-industry/cyber-security/ai-can-snoop-on-your-computer-screen-using-signals-leaking-from-hdmi-cables)
+* Hacker News: [Deep-Tempest: 利用深度学习窃听 HDMI](https://news.ycombinator.com/item?id=41116682)
+* TechXplore: [安全研究人员透露，可以通过窃听 HDMI 电缆获取计算机屏幕数据](https://techxplore.com/news/2024-07-reveal-eavesdrop-hdmi-cables-capture.html)
+* Tom's Hardware: [人工智能可以利用 HDMI 电缆泄漏的信号窥探你的电脑屏幕——研究人员开发出一种新的人工智能模型，能够利用天线进行远程攻击](https://www.tomshardware.com/tech-industry/cyber-security/ai-can-snoop-on-your-computer-screen-using-signals-leaking-from-hdmi-cables)
 * Montevideo Portal: [¿Por qué la inteligencia artificial puede ver una pantalla? Un estudio uruguayo indagó](https://www.montevideo.com.uy/Ciencia-y-Tecnologia/-Por-que-la-inteligencia-artificial-puede-ver-una-pantalla-Un-estudio-uruguayo-indago-uc895790)
-* El Observador: [Uruguayos interceptan señales del cable HDMI para espiar monitores y asombran al mundo](https://www.elobservador.com.uy/uruguayos-interceptan-senales-del-cable-hdmi-espiar-monitores-y-asombran-al-mundo-n5954308)
-* El País: [La amenaza invisible: uruguayos descubrieron cómo un hacker podría espiar tu pantalla a través del cable HDMI](https://www.elpais.com.uy/domingo/la-amenaza-invisible-uruguayos-descubrieron-como-un-hacker-podria-espiar-tu-pantalla-a-traves-del-cable-hdmi)
+* El Observador: [乌拉圭拦截 HDMI 电缆与显示器和世界各地的电缆](https://www.elobservador.com.uy/uruguayos-interceptan-senales-del-cable-hdmi-espiar-monitores-y-asombran-al-mundo-n5954308)
+* El País: [隐形的秘密：乌拉圭通过 HDMI 电缆进行黑客攻击](https://www.elpais.com.uy/domingo/la-amenaza-invisible-uruguayos-descubrieron-como-un-hacker-podria-espiar-tu-pantalla-a-traves-del-cable-hdmi)
 
-## Video demo
+## 视频演示
 
-We are particularly interested in recovering the text present in the display, and we improve the Character Error Rate from 90% in the unmodified gr-tempest, to less than 30% using our module. Watch a video of the full system in operation:
+我们特别感兴趣的是恢复显示屏上的文本，并且我们使用我们的模块将字符错误率从未修改的 gr-tempest 中的 90% 提高到 30% 以下。观看完整系统运行的视频：
 
 [<img src="https://img.youtube.com/vi/ig3NWg_Yzag/maxresdefault.jpg" width="50%"/> ](https://www.youtube.com/watch?v=ig3NWg_Yzag)
 
-## How does it works? (and how to cite our work or data)
+## 它是如何工作的？（以及如何引用我们的工作或数据）
 
-You can find a detailed technical explanation of how deep-tempest works in [**our article**](https://arxiv.org/abs/2407.09717). If you found our work or data useful for your research, please consider citing it as follows:
+您可以在我们的文章中找到有关 deep-tempest 工作原理的详细技术解释。如果您发现我们的工作或数据对您的研究有用，请考虑引用如下：
 
 ````
 @misc{fernández2024deeptempestusingdeeplearning,
@@ -45,72 +45,72 @@ You can find a detailed technical explanation of how deep-tempest works in [**ou
 }
 ````
 
-## Data
+## 数据
 
-In addition to the source code, we are also open sourcing the whole dataset we used. Follow [this dropbox link](https://www.dropbox.com/scl/fi/7r2o8nbws45q30j5lkxjb/deeptempest_dataset.zip?rlkey=w7jvw275hu8tsyflgdkql7l1c&st=e8rdldz0&dl=0) to download a ZIP file (~7GB). After unzipping, you will find synthetic and real captured images used for experiments, training, and evaluation during the work. These images consists of 1600x900 resolution with the SDR's center frequency at the third pixel-rate harmonic (324 MHz).
+除了源代码，我们还开源了我们使用的整个数据集。点击 [this dropbox link](https://www.dropbox.com/scl/fi/7r2o8nbws45q30j5lkxjb/deeptempest_dataset.zip?rlkey=w7jvw275hu8tsyflgdkql7l1c&st=e8rdldz0&dl=0)载 ZIP 文件（约 7GB）。 解压后，您将找到用于工作期间实验、训练和评估的合成和真实捕获图像。这些图像的分辨率为 1600x900，SDR 的中心频率为第三像素速率谐波（324 MHz）。
 
-The structure of the directories containing the data is **different** for **synthetic data** compared to **captured data**:
+与捕获的数据相比，合成数据包含数据的目录结构有所不同：
 
-### Synthetic data
+### 合成数据
 
-* *ground-truth* (directory with reference/monitor view images)
+* *真实情况（带有参考/监视视图图像的目录）
     - image1.png
     - ...
     - imageN.png
 
-* *simulations* (directory with synthetic degradation/capture images)
+* *模拟（带有合成退化/捕获图像的目录）
     - image1_synthetic.png
     - ...
     - imageN_synthetic.png
 
-### Real data
+### 真实数据
 
-- image1.png (*image1 ground-truth*)
+- image1.png (*图像 1 真实情况*)
 - ...
-- imageN.png (*imageN ground-truth*)
+- imageN.png (*imageN 真实情况*)
 
-* *Image 1* (directory with captures of *image1.png*)
+* *Image 1* (包含image1.png的捕获的目录*)
     - capture1_image1.png
     - ...
     - captureM_image1.png
 
 * ...
 
-* *Image N* (directory with captures of *image1.png*)
+* *Image N* (包含image1.png捕获的目录*)
     - capture1_imageN.png
     - ...
     - captureM_imageN.png
 
-## Code and Requirements
+## 规范和要求
 
-Clone the repository:
+克隆存储库：
 
 ```shell
 git clone https://github.com/emidan19/deep-tempest.git
 ```
 
-Both [gr-tempest](./gr-tempest/) and [end-to-end](./end-to-end/) folders contains a guide on how to execute the corresponding files for image capturing, inference and train the deep learning architecture based on DRUNet from [KAIR image restoration repository](https://github.com/cszn/KAIR/tree/master).
+[gr-tempest](./gr-tempest/) 和 [end-to-end](./end-to-end/) 文件夹都包含有关如何执行相应文件进行图像捕获、推理和训练基于[KAIR 图像恢复储存库](https://github.com/cszn/KAIR/tree/master)中的DRUNet的深度学习架构的指南.
 
-The code is written in Python version 3.10, using Anaconda environments. To replicate the working environment, create a new one with the libraries listed in [*requirements.txt*](./requirements.txt):
+代码是用 Python 3.10 版编写的，使用的是 Anaconda 环境。要复制工作环境，请使用[*requirements.txt*](./requirements.txt)中列出的库创建一个新环境：:
 
 ```shell
 conda create --name deeptempest --file requirements.txt
 ```
 
-Activate it with:
+使用以下命令激活它：
 ```shell
 conda activate deeptempest
 ```
 
-Regarding installations with GNU Radio, **it is necessary to use the [gr-tempest](./gr-tempest/) version in this repository** *(which contains a modified version of the original gr-tempest)*. After this, run the following *grc* files flowgraphs to activate the *hierblocks*:
-- [binary_serializer.grc](./gr-tempest/examples/binary_serializer.grc)
-- [FFT_autocorrelate.grc](./gr-tempest/examples/FFT_autocorrelate.grc)
-- [FFT_crosscorrelate.grc](./gr-tempest/examples/FFT_crosscorrelate.grc)
+对于使用 GNU Radio 进行安装, **必须使用此存储库中的 [gr-tempest](./gr-tempest/) *版本（其中包含原始 gr-tempest 的修改版本）。*. 之后，运行以下grc文件流程图以激活hierblocks：
+- [二进制序列化器](./gr-tempest/examples/binary_serializer.grc)
+- [FFT_自相关](./gr-tempest/examples/FFT_autocorrelate.grc)
+- [FFT_交叉相关](./gr-tempest/examples/FFT_crosscorrelate.grc)
 - [Keep_1_in_N_frames.grc](./gr-tempest/examples/Keep_1_in_N_frames.grc)
 
-Finally run the flowgraph [deep-tempest_example.grc](./gr-tempest/examples/deep-tempest_example.grc) to capture the monitor images and be able to recover them with better quality using the *Save Capture* block.
+最后运行流程图 [deep-tempest_example.grc](./gr-tempest/examples/deep-tempest_example.grc) 来捕获监视器图像，并使用保存捕获块以更好的质量恢复它们。
 
-## Credits
+## 致谢
 
 IIE Instituto de Ingeniería Eléctrica, 
 Facultad de Ingeniería, 
@@ -118,4 +118,4 @@ Universidad de la República,
 Montevideo, Uruguay, 
 http://iie.fing.edu.uy/investigacion/grupos/artes/
 
-Please refer to the LICENSE file for contact information and further credits.
+请参阅 LICENSE 文件以获取联系信息和进一步的信用。
